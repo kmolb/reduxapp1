@@ -4,5 +4,8 @@
 .btnn{
     background-color: gray; 
     padding: 10px 10px;
+    margin: 10px;
     display: block;
+    border-style: dotted;
+    width: 25px;
 }
