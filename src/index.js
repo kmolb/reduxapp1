@@ -9,9 +9,10 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 
 function reducer(state = 0, action) {
+    console.log(action)
     switch (action.type) {
       case 'INCREMENT':
-        return state + 1;
+        return state + action.num;
       case 'DECREMENT':
         return state - 1;
       default:
@@ -21,7 +22,9 @@ function reducer(state = 0, action) {
 const store = createStore(reducer);
 
 ReactDOM.render(<Provider store={store}> 
-    <App /></Provider>, document.getElementById('root')
+    <App />
+    </Provider>, 
+    document.getElementById('root')
     );
 
 // If you want your app to work offline and load faster, you can change
